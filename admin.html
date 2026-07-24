@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101713" />
+  <title>Sueño Admin</title>
+  <meta name="description" content="Sueño Coffee business control center demo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="admin-app">
+    <aside class="sidebar">
+      <div class="admin-brand">
+        <span class="admin-brand-mark">S</span>
+        <span><strong>Sueño</strong><small>BUSINESS</small></span>
+      </div>
+
+      <div class="demo-chip"><i></i> DEMO DATA</div>
+
+      <nav class="side-nav" aria-label="Admin navigation">
+        <button class="admin-nav active" data-admin-nav="dashboard"><span>⌂</span><b>Dashboard</b></button>
+        <button class="admin-nav" data-admin-nav="orders"><span>▤</span><b>Orders</b><em id="sideOrderBadge">0</em></button>
+        <button class="admin-nav" data-admin-nav="customers"><span>◎</span><b>Customers</b></button>
+        <button class="admin-nav" data-admin-nav="menu-admin"><span>☕</span><b>Menu</b></button>
+        <button class="admin-nav" data-admin-nav="insights"><span>↗</span><b>Insights</b></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="returnCustomerButton" class="return-customer">← Customer App</button>
+        <p>Presentation prototype<br />Sueño Coffee</p>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <p class="admin-kicker" id="topbarKicker">SUEÑO BUSINESS</p>
+          <h1 id="topbarTitle">Dashboard</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="refresh-button" id="refreshAdminButton" title="Refresh demo data">↻</button>
+          <div class="admin-avatar">A</div>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <section class="admin-page active" id="dashboard">
+          <div class="welcome-row">
+            <div>
+              <p class="eyebrow">GOOD MORNING</p>
+              <h2>Here’s what’s happening at Sueño today.</h2>
+              <p>Orders, customers, loyalty, and performance — all in one place.</p>
+            </div>
+            <button class="primary-action" data-admin-nav="orders">View live orders →</button>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card"><span>Today’s sales</span><strong>₱12,480</strong><small>↑ 12.4% vs yesterday</small></article>
+            <article class="metric-card"><span>Orders</span><strong>47</strong><small>8 during peak hour</small></article>
+            <article class="metric-card"><span>Customers</span><strong>39</strong><small>12 new today</small></article>
+            <article class="metric-card"><span>Returning</span><strong>69%</strong><small>27 returning customers</small></article>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="panel live-panel">
+              <div class="panel-heading">
+                <div><p class="eyebrow">LIVE OPERATIONS</p><h3>Active order</h3></div>
+                <span class="live-dot"><i></i> LIVE</span>
+              </div>
+              <div id="dashboardActiveOrder"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading"><div><p class="eyebrow">TODAY</p><h3>Customer mix</h3></div></div>
+              <div class="customer-mix">
+                <div class="mix-ring"><div><strong>69%</strong><span>returning</span></div></div>
+                <div class="mix-legend">
+                  <p><i class="returning"></i><span>Returning</span><strong>27</strong></p>
+                  <p><i class="new"></i><span>New</span><strong>12</strong></p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="dashboard-grid lower-grid">
+            <section class="panel">
+              <div class="panel-heading"><div><p class="eyebrow">PRODUCTS</p><h3>Top drinks today</h3></div><button class="panel-link" data-admin-nav="insights">Details</button></div>
+              <div class="ranking-list">
+                <div><span class="rank">1</span><span>Spanish Latte</span><strong>18</strong></div>
+                <div><span class="rank">2</span><span>Sea Salt Caramel Latte</span><strong>13</strong></div>
+                <div><span class="rank">3</span><span>Iced Americano</span><strong>9</strong></div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading"><div><p class="eyebrow">LOYALTY</p><h3>Rewards activity</h3></div></div>
+              <div class="mini-stat-grid">
+                <div><strong>43</strong><span>Stamps issued</span></div>
+                <div><strong>7</strong><span>Rewards used</span></div>
+                <div><strong>284</strong><span>Active members</span></div>
+              </div>
+            </section>
+          </div>
+
+          <section class="quick-actions panel">
+            <div class="panel-heading"><div><p class="eyebrow">SHORTCUTS</p><h3>Quick actions</h3></div></div>
+            <div class="quick-grid">
+              <button data-demo-action="promotion"><span>＋</span><b>Create promotion</b><small>Launch a customer offer</small></button>
+              <button data-admin-nav="menu-admin"><span>☕</span><b>Manage menu</b><small>Products, price & availability</small></button>
+              <button data-admin-nav="customers"><span>◎</span><b>View customers</b><small>Members and visit behavior</small></button>
+            </div>
+          </section>
+        </section>
+
+        <section class="admin-page" id="orders">
+          <div class="page-intro">
+            <div><p class="eyebrow">ORDER CONTROL</p><h2>Live orders</h2><p>Accept, prepare, and complete customer orders from one queue.</p></div>
+            <span class="demo-note">Customer app and admin demo share the same local order.</span>
+          </div>
+          <div class="order-tabs">
+            <button class="order-tab active">Active <span id="activeOrderCount">0</span></button>
+            <button class="order-tab">Completed <span>24</span></button>
+          </div>
+          <div id="ordersActiveOrder"></div>
+          <div class="sample-completed">
+            <div class="section-label">RECENTLY COMPLETED</div>
+            <article class="completed-row"><span class="completed-icon">✓</span><div><strong>#SUE-3814</strong><small>2 items • Pickup • 9:42 AM</small></div><b>₱350</b></article>
+            <article class="completed-row"><span class="completed-icon">✓</span><div><strong>#SUE-3789</strong><small>1 item • Dine-in • 9:31 AM</small></div><b>₱165</b></article>
+            <article class="completed-row"><span class="completed-icon">✓</span><div><strong>#SUE-3741</strong><small>3 items • Pickup • 9:18 AM</small></div><b>₱485</b></article>
+          </div>
+        </section>
+
+        <section class="admin-page" id="customers">
+          <div class="page-intro">
+            <div><p class="eyebrow">CUSTOMER INTELLIGENCE</p><h2>Know your regulars.</h2><p>See who comes back, what they love, and how valuable the relationship becomes over time.</p></div>
+          </div>
+          <div class="metric-grid compact-metrics">
+            <article class="metric-card"><span>Total members</span><strong>1,284</strong><small>+126 this month</small></article>
+            <article class="metric-card"><span>Returning</span><strong>684</strong><small>53% of members</small></article>
+            <article class="metric-card"><span>Inactive 30+ days</span><strong>203</strong><small>Re-engagement opportunity</small></article>
+            <article class="metric-card"><span>Avg. visits/member</span><strong>4.8</strong><small>This quarter</small></article>
+          </div>
+          <section class="panel customer-table-panel">
+            <div class="panel-heading"><div><p class="eyebrow">MEMBERS</p><h3>Customer database</h3></div><input id="customerSearch" class="admin-search" type="search" placeholder="Search customers" /></div>
+            <div class="customer-table" id="customerTable"></div>
+          </section>
+        </section>
+
+        <section class="admin-page" id="menu-admin">
+          <div class="page-intro">
+            <div><p class="eyebrow">CATALOG CONTROL</p><h2>Menu management</h2><p>Control prices and availability without changing the customer-facing design.</p></div>
+            <button class="primary-action" data-demo-action="add-product">＋ Add product</button>
+          </div>
+          <section class="panel menu-admin-panel">
+            <div class="menu-admin-header"><span>PRODUCT</span><span>PRICE</span><span>STATUS</span><span></span></div>
+            <div id="adminMenuList"></div>
+          </section>
+        </section>
+
+        <section class="admin-page" id="insights">
+          <div class="page-intro">
+            <div><p class="eyebrow">BUSINESS INTELLIGENCE</p><h2>Turn activity into decisions.</h2><p>See what customers buy, when they return, and where promotions can create growth.</p></div>
+          </div>
+          <div class="insight-grid">
+            <section class="panel insight-hero">
+              <div class="panel-heading"><div><p class="eyebrow">7-DAY SALES</p><h3>Revenue trend</h3></div><strong>₱78,940</strong></div>
+              <div class="bar-chart" aria-label="Demo seven day sales chart">
+                <div style="--h:58%"><span>Mon</span></div><div style="--h:72%"><span>Tue</span></div><div style="--h:64%"><span>Wed</span></div><div style="--h:81%"><span>Thu</span></div><div style="--h:100%"><span>Fri</span></div><div style="--h:92%"><span>Sat</span></div><div style="--h:76%"><span>Sun</span></div>
+              </div>
+            </section>
+            <section class="panel insight-callout">
+              <span class="insight-icon">↘</span>
+              <p class="eyebrow">OPPORTUNITY</p>
+              <h3>Tuesday, 2–5 PM is your slowest period.</h3>
+              <p>Launch a double-stamp offer during this window and measure whether customer traffic improves.</p>
+              <button class="primary-action" data-demo-action="promotion">Create Tuesday promo →</button>
+            </section>
+          </div>
+          <div class="dashboard-grid lower-grid">
+            <section class="panel"><div class="panel-heading"><div><p class="eyebrow">CUSTOMERS</p><h3>Retention snapshot</h3></div></div><div class="big-insight"><strong>69%</strong><span>of today’s customers have visited Sueño before.</span></div></section>
+            <section class="panel"><div class="panel-heading"><div><p class="eyebrow">BASKET</p><h3>Average order</h3></div></div><div class="big-insight"><strong>₱266</strong><span>Average customer order value today.</span></div></section>
+          </div>
+        </section>
+      </main>
+
+      <nav class="mobile-admin-nav" aria-label="Mobile admin navigation">
+        <button class="admin-nav active" data-admin-nav="dashboard"><span>⌂</span><small>Home</small></button>
+        <button class="admin-nav" data-admin-nav="orders"><span>▤</span><small>Orders</small><em id="mobileOrderBadge">0</em></button>
+        <button class="admin-nav" data-admin-nav="customers"><span>◎</span><small>Customers</small></button>
+        <button class="admin-nav" data-admin-nav="menu-admin"><span>☕</span><small>Menu</small></button>
+        <button class="admin-nav" data-admin-nav="insights"><span>↗</span><small>Insights</small></button>
+      </nav>
+    </div>
+  </div>
+
+  <div class="admin-toast" id="adminToast">Demo updated.</div>
+  <script src="admin.js"></script>
+</body>
+</html>
