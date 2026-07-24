@@ -124,5 +124,5 @@ notificationButton?.addEventListener('click', () => {
 });
 
 const orderingScript = document.createElement('script');
-orderingScript.src = 'ordering.js';
+orderingScript.src = 'ordering-v2.js';
 document.body.appendChild(orderingScript);
