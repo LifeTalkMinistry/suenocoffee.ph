@@ -123,6 +123,22 @@ notificationButton?.addEventListener('click', () => {
   toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
 });
 
+const profileSettings = document.querySelector('#profile .settings-list');
+if (profileSettings) {
+  const adminDemoButton = document.createElement('button');
+  adminDemoButton.className = 'settings-row';
+  adminDemoButton.id = 'adminDemoButton';
+  adminDemoButton.innerHTML = `
+    <span class="settings-icon">▣</span>
+    <span><strong>Admin Demo</strong><small>Preview Sueño management dashboard</small></span>
+    <b>›</b>
+  `;
+  adminDemoButton.addEventListener('click', () => {
+    window.location.href = 'admin.html';
+  });
+  profileSettings.appendChild(adminDemoButton);
+}
+
 const orderingScript = document.createElement('script');
 orderingScript.src = 'ordering-v2.js';
 document.body.appendChild(orderingScript);
