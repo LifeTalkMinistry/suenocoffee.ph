@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#20140f" />
+  <title>Sueño Coffee</title>
+  <meta name="description" content="Sueño Coffee digital loyalty, rewards, menu, and promotions experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-nav="home" aria-label="Go to home">
+        <span class="brand-mark">S</span>
+        <span class="brand-copy">
+          <strong>Sueño</strong>
+          <small>COFFEE</small>
+        </span>
+      </button>
+      <div class="top-actions">
+        <button class="icon-button" id="notificationButton" aria-label="Notifications">
+          <span>♢</span>
+          <i class="notification-dot"></i>
+        </button>
+        <button class="avatar-button" data-nav="profile" aria-label="Open profile">M</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page active" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">GOOD MORNING, MAX</p>
+          <h1>Your next coffee is already getting closer.</h1>
+          <p>Every cup earns something back at Sueño.</p>
+        </div>
+
+        <article class="loyalty-card">
+          <div class="loyalty-topline">
+            <div>
+              <span class="card-label">SUEÑO REWARDS</span>
+              <h2>7 <small>/ 10 stamps</small></h2>
+            </div>
+            <div class="cup-badge">☕</div>
+          </div>
+
+          <div class="stamp-grid" aria-label="7 out of 10 loyalty stamps earned">
+            <span class="stamp earned">☕</span>
+            <span class="stamp earned">☕</span>
+            <span class="stamp earned">☕</span>
+            <span class="stamp earned">☕</span>
+            <span class="stamp earned">☕</span>
+            <span class="stamp earned">☕</span>
+            <span class="stamp earned">☕</span>
+            <span class="stamp">8</span>
+            <span class="stamp">9</span>
+            <span class="stamp reward">★</span>
+          </div>
+
+          <div class="loyalty-footer">
+            <p><strong>3 more drinks</strong> until your free coffee.</p>
+            <button class="light-button" id="showQrButton">Show my QR</button>
+          </div>
+        </article>
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FOR YOU</p>
+            <h2>Something worth coming back for</h2>
+          </div>
+          <button class="text-button" data-nav="promos">View all</button>
+        </div>
+
+        <article class="promo-feature">
+          <div class="promo-art">
+            <span class="promo-cup">☕</span>
+            <span class="spark spark-a">✦</span>
+            <span class="spark spark-b">✦</span>
+          </div>
+          <div class="promo-content">
+            <span class="pill">TODAY ONLY</span>
+            <h3>Double Stamp Friday</h3>
+            <p>Order any handcrafted drink from 2–5 PM and earn two stamps.</p>
+            <button class="dark-button" data-nav="menu">Browse drinks</button>
+          </div>
+        </article>
+
+        <div class="section-heading compact-heading">
+          <div>
+            <p class="eyebrow">FAVORITES</p>
+            <h2>Made for your next visit</h2>
+          </div>
+          <button class="text-button" data-nav="menu">Full menu</button>
+        </div>
+
+        <div class="drink-scroll">
+          <article class="drink-card">
+            <div class="drink-image latte">☕</div>
+            <span class="tiny-pill">BESTSELLER</span>
+            <h3>Spanish Latte</h3>
+            <p>Rich espresso, creamy milk, signature sweetness.</p>
+            <strong>₱165</strong>
+          </article>
+          <article class="drink-card">
+            <div class="drink-image matcha">🍵</div>
+            <span class="tiny-pill">CUSTOMER FAVORITE</span>
+            <h3>Matcha Cloud</h3>
+            <p>Earthy matcha finished with a silky milk cloud.</p>
+            <strong>₱175</strong>
+          </article>
+          <article class="drink-card">
+            <div class="drink-image americano">☕</div>
+            <span class="tiny-pill">CLASSIC</span>
+            <h3>Iced Americano</h3>
+            <p>Bold espresso over ice for a clean, refreshing finish.</p>
+            <strong>₱125</strong>
+          </article>
+        </div>
+
+        <article class="visit-card">
+          <div class="visit-icon">↗</div>
+          <div>
+            <span class="card-label">YOUR SUEÑO STORY</span>
+            <h3>4 visits this month</h3>
+            <p>You are one visit away from beating your June streak.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="page" id="rewards">
+        <div class="page-title">
+          <p class="eyebrow">SUEÑO REWARDS</p>
+          <h1>Every cup should bring you closer to something.</h1>
+          <p>Collect stamps, unlock rewards, and make every visit count.</p>
+        </div>
+
+        <article class="reward-progress-card">
+          <div class="reward-ring" aria-label="70 percent progress">
+            <div class="reward-ring-inner">
+              <strong>7</strong>
+              <span>of 10</span>
+            </div>
+          </div>
+          <div>
+            <span class="pill">CURRENT PROGRESS</span>
+            <h2>Free handcrafted drink</h2>
+            <p>Just 3 more qualifying drinks to unlock your next reward.</p>
+          </div>
+        </article>
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">AVAILABLE</p>
+            <h2>Your rewards</h2>
+          </div>
+        </div>
+
+        <article class="reward-item unlocked">
+          <div class="reward-icon">+2</div>
+          <div class="reward-item-copy">
+            <span class="reward-status">READY TO USE</span>
+            <h3>Double stamp pass</h3>
+            <p>Use this on your next qualifying drink.</p>
+          </div>
+          <button class="small-button">Use</button>
+        </article>
+
+        <article class="reward-item">
+          <div class="reward-icon muted">☕</div>
+          <div class="reward-item-copy">
+            <span class="reward-status muted-text">3 STAMPS AWAY</span>
+            <h3>Free drink</h3>
+            <p>Any handcrafted drink up to ₱190.</p>
+          </div>
+          <span class="lock">○</span>
+        </article>
+
+        <article class="info-card">
+          <span class="info-icon">i</span>
+          <div>
+            <h3>How it works</h3>
+            <p>Show your Sueño QR before paying. One qualifying drink earns one stamp. Special promos may earn more.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="page" id="menu">
+        <div class="page-title menu-title">
+          <p class="eyebrow">SUEÑO MENU</p>
+          <h1>What are you dreaming of today?</h1>
+          <p>Explore customer favorites and Sueño signatures.</p>
+        </div>
+
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="menuSearch" type="search" placeholder="Search drinks" aria-label="Search menu" />
+        </div>
+
+        <div class="category-tabs" id="categoryTabs">
+          <button class="category active" data-category="all">All</button>
+          <button class="category" data-category="coffee">Coffee</button>
+          <button class="category" data-category="non-coffee">Non-coffee</button>
+          <button class="category" data-category="food">Food</button>
+        </div>
+
+        <div class="menu-list" id="menuList">
+          <article class="menu-item" data-name="Spanish Latte" data-category="coffee">
+            <div class="menu-thumb latte">☕</div>
+            <div class="menu-copy">
+              <div class="menu-row">
+                <h3>Spanish Latte</h3>
+                <strong>₱165</strong>
+              </div>
+              <p>Espresso, fresh milk, signature sweet cream.</p>
+              <span class="tiny-pill">BESTSELLER</span>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="Sea Salt Caramel Latte" data-category="coffee">
+            <div class="menu-thumb caramel">☕</div>
+            <div class="menu-copy">
+              <div class="menu-row">
+                <h3>Sea Salt Caramel Latte</h3>
+                <strong>₱175</strong>
+              </div>
+              <p>Caramel espresso latte finished with a light sea-salt cream.</p>
+              <span class="tiny-pill">SIGNATURE</span>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="Iced Americano" data-category="coffee">
+            <div class="menu-thumb americano">☕</div>
+            <div class="menu-copy">
+              <div class="menu-row">
+                <h3>Iced Americano</h3>
+                <strong>₱125</strong>
+              </div>
+              <p>Double espresso over chilled filtered water and ice.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="Matcha Cloud" data-category="non-coffee">
+            <div class="menu-thumb matcha">🍵</div>
+            <div class="menu-copy">
+              <div class="menu-row">
+                <h3>Matcha Cloud</h3>
+                <strong>₱175</strong>
+              </div>
+              <p>Premium matcha, milk, and a smooth cloud cream finish.</p>
+              <span class="tiny-pill">CUSTOMER FAVORITE</span>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="Chocolate Dream" data-category="non-coffee">
+            <div class="menu-thumb chocolate">🥤</div>
+            <div class="menu-copy">
+              <div class="menu-row">
+                <h3>Chocolate Dream</h3>
+                <strong>₱160</strong>
+              </div>
+              <p>Deep cocoa, milk, and a creamy chocolate finish.</p>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="Butter Croissant" data-category="food">
+            <div class="menu-thumb pastry">🥐</div>
+            <div class="menu-copy">
+              <div class="menu-row">
+                <h3>Butter Croissant</h3>
+                <strong>₱110</strong>
+              </div>
+              <p>Flaky, buttery pastry baked for your coffee pairing.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-state" id="menuEmpty">No menu item matches your search.</p>
+      </section>
+
+      <section class="page" id="promos">
+        <div class="page-title">
+          <p class="eyebrow">MEMBER OFFERS</p>
+          <h1>A little extra reason to visit Sueño.</h1>
+          <p>Offers designed for members of the Sueño community.</p>
+        </div>
+
+        <article class="offer-card featured-offer">
+          <div class="offer-tag">FRIDAY • 2–5 PM</div>
+          <div class="offer-graphic">2×</div>
+          <h2>Double Stamp Friday</h2>
+          <p>Earn two stamps when you purchase any handcrafted beverage during the promo period.</p>
+          <div class="offer-bottom">
+            <span>Ends July 31</span>
+            <button class="light-button" data-nav="menu">See menu</button>
+          </div>
+        </article>
+
+        <article class="offer-card light-offer">
+          <div class="offer-mini-icon">☕</div>
+          <div>
+            <span class="pill">MEMBER EXCLUSIVE</span>
+            <h3>Bring a friend</h3>
+            <p>Buy two handcrafted drinks and get ₱30 off your total bill.</p>
+            <small>Valid Monday–Thursday • Dine-in only</small>
+          </div>
+        </article>
+
+        <article class="offer-card light-offer">
+          <div class="offer-mini-icon">✦</div>
+          <div>
+            <span class="pill">WELCOME TREAT</span>
+            <h3>New member bonus</h3>
+            <p>New Sueño Rewards members get one bonus stamp after their first qualifying purchase.</p>
+            <small>Automatically applied</small>
+          </div>
+        </article>
+      </section>
+
+      <section class="page" id="profile">
+        <div class="profile-hero">
+          <div class="profile-avatar">M</div>
+          <div>
+            <span class="pill">SUEÑO MEMBER</span>
+            <h1>Max</h1>
+            <p>Member since July 2026</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card"><strong>7</strong><span>Stamps</span></div>
+          <div class="stat-card"><strong>12</strong><span>Total visits</span></div>
+          <div class="stat-card"><strong>2</strong><span>Rewards used</span></div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ACCOUNT</p>
+            <h2>Your Sueño</h2>
+          </div>
+        </div>
+
+        <div class="settings-list">
+          <button class="settings-row" id="profileQrButton">
+            <span class="settings-icon">▦</span>
+            <span><strong>My Sueño QR</strong><small>Show this before paying</small></span>
+            <b>›</b>
+          </button>
+          <button class="settings-row">
+            <span class="settings-icon">♡</span>
+            <span><strong>Favorite drinks</strong><small>Your saved Sueño orders</small></span>
+            <b>›</b>
+          </button>
+          <button class="settings-row">
+            <span class="settings-icon">◷</span>
+            <span><strong>Activity</strong><small>Visits, stamps, and rewards</small></span>
+            <b>›</b>
+          </button>
+          <button class="settings-row">
+            <span class="settings-icon">⚙</span>
+            <span><strong>Preferences</strong><small>Profile and notifications</small></span>
+            <b>›</b>
+          </button>
+        </div>
+
+        <article class="founder-note">
+          <span>☕</span>
+          <p><strong>Made for the Sueño community.</strong><br />A better coffee experience before, during, and after every visit.</p>
+        </article>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Primary navigation">
+      <button class="nav-item active" data-nav="home"><span>⌂</span><small>Home</small></button>
+      <button class="nav-item" data-nav="rewards"><span>★</span><small>Rewards</small></button>
+      <button class="nav-item qr-nav" id="navQrButton"><span>▦</span><small>My QR</small></button>
+      <button class="nav-item" data-nav="menu"><span>☕</span><small>Menu</small></button>
+      <button class="nav-item" data-nav="profile"><span>○</span><small>Profile</small></button>
+    </nav>
+  </div>
+
+  <div class="modal-backdrop" id="qrModal" aria-hidden="true">
+    <div class="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
+      <button class="modal-close" id="closeQrButton" aria-label="Close QR">×</button>
+      <span class="pill">SUEÑO REWARDS</span>
+      <h2 id="qrTitle">Your member QR</h2>
+      <p>Show this at the counter before you pay.</p>
+      <div class="fake-qr" aria-label="Demo QR code">
+        <div class="qr-grid" id="qrGrid"></div>
+      </div>
+      <strong class="member-code">SUENO • 004827</strong>
+      <div class="qr-points"><span>Current progress</span><strong>7 / 10 stamps</strong></div>
+      <small class="demo-note">Demo customer profile for presentation purposes.</small>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">You have 1 new Sueño offer.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
