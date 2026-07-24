@@ -122,3 +122,7 @@ notificationButton?.addEventListener('click', () => {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
 });
+
+const orderingScript = document.createElement('script');
+orderingScript.src = 'ordering.js';
+document.body.appendChild(orderingScript);
